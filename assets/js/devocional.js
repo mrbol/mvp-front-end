@@ -25,7 +25,7 @@ const getList = async () => {
     })
     .catch((error) => {
       $('#divCarregando').hide();
-      alert("Ocorreu um erro inesperado ao recupera item \nMotivo : " + error.message + 
+      alert("Ocorreu um erro inesperado ao recuperar a lista \nMotivo : " + error.message + 
         "\n\nEsta pagina tem uma dependencia  com uma API."+
         "\nPor favor verifique se API está disponivel."+
         "\nPara maiores informações acesse:\n"+
@@ -165,7 +165,7 @@ const deleteItem = (item, div) => {
       }
     })
     .catch((error) => {
-      alert("Ocorreu um erro inesperado ao recupera item \nMotivo : " + error.message + 
+      alert("Ocorreu um erro inesperado ao tentar excluir o item \nMotivo : " + error.message + 
         "\n\nEsta pagina tem uma dependencia  com uma API."+
         "\nPor favor verifique se API está disponivel."+
         "\nPara maiores informações acesse:\n"+
@@ -279,7 +279,7 @@ $('#btn-registrar').on('click', function () {
       })
       .catch((error) => {
         $('#divCarregando').hide();
-        alert("Ocorreu um erro inesperado ao recupera item \nMotivo : " + error.message + 
+        alert("Ocorreu um erro inesperado ao registrar o item \nMotivo : " + error.message + 
         "\n\nEsta pagina tem uma dependencia  com uma API."+
         "\nPor favor verifique se API está disponivel."+
         "\nPara maiores informações acesse:\n"+
@@ -373,10 +373,4 @@ function limpar_campo() {
   document.getElementById("versiculo").value = "";
   document.getElementById("pensamento").value = "";
   document.getElementById("oracao").value = "";
-}
-
-//mostra modal de aviso
-function mostra_modal_aviso(mensagem){
-  //$('#modal-aviso').find('modal-body p').html(mensagem);
-//  $('#modal-aviso').modal('show');
 }
