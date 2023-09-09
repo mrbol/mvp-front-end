@@ -322,32 +322,28 @@ function valida_campos() {
   let cabecalhoMensagem = "Atenção para mensagem abaixo\n";
   let corpoMensagem = "";
 
-  if (referencia == "") {
-    corpoMensagem = corpoMensagem + "\n" + retorna_mensagem("Referencia");
+  if (referencia == "") {   
+    $('#referencia').attr("placeholder","Informe a referencia biblica" )
     $('#referencia').focus();
-    retorno = false;
+    return false;
   }
 
   if (versiculo == "") {
-    corpoMensagem = corpoMensagem + "\n" + retorna_mensagem("Versiculo");
+    $('#versiculo').attr("placeholder","Informe o Versiculo" )
     $('#versiculo').focus();
-    retorno = false;
+    return false;
   }
 
   if (pensamento == "") {
-    corpoMensagem = corpoMensagem + "\n" + retorna_mensagem("Pensamento");
+    $('#pensamento').attr("placeholder","Informe o pensamento" )
     $('#pensamento').focus();
-    retorno = false;
+    return false;
   }
 
   if (oracao == "") {
-    corpoMensagem = corpoMensagem + "\n" + retorna_mensagem("Oracao");
+    $('#oracao').attr("placeholder","Informe a oração" )
     $('#oracao').focus();
-    retorno = false;
-  }
-
-  if (!retorno) {
-    alert(cabecalhoMensagem + corpoMensagem);
+    return false;
   }
 
   return retorno;
